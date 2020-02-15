@@ -5,27 +5,60 @@
 #include<vector>
 #include<random>
 #include "Challenges.h"
+#include "Timer.h"
+
+
+
 
 int main()
 {
 	std::vector<int> set;
 	Challenges ch;
-	for (int i = 0; i < 100000; i++)
+	for (int i = 1; i <= 200000; i++)
 	{
 		// Add a random num between 1-1000
-		set.push_back(rand() % 1000 + 1);
+		//set.push_back(rand() % 1000 + 1);
+
+		set.push_back(i);		
 	}
 
+	
+
+	
+	ch.StressCase(5, 9);
+	
+
+	/*std::cout << "Input size:" << set.size()<<"\n";
+	std::cout << "\n";
+	std::cout << "Maximum par wise product fast"<< "\n" ;*/
+
+	/*Timer stopWatch;
+	
+	int64_t resultFast =  ch.MaximumPairProductFast(set);
+
+	stopWatch.Stop();*/
+
+	//std::cout << resultFast << "\n";
+	//std::cout << "\n";
+	//std::cout << "Maximum par wise product" << "\n";
+
+	//Timer stopWatchB;
+
+	//int64_t result = ch.MaximumPairProductNaive(set);
+
+	//stopWatchB.Stop();
+
+	//std::cout << result << "\n";
+	//std::cout <<  "\n";
 
 
 	
 
-	int result =  ch.MaximumPairProductFast(set);
-
-	//int result = ch.MaximumPairProduct(set);
-
-   std::cout << result;
+  
 }
+
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

@@ -2,10 +2,29 @@
 //
 
 #include <iostream>
+#include<vector>
+#include<random>
+#include "Challenges.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	std::vector<int> set;
+	Challenges ch;
+	for (int i = 0; i < 100000; i++)
+	{
+		// Add a random num between 1-1000
+		set.push_back(rand() % 1000 + 1);
+	}
+
+
+
+	
+
+	int result =  ch.MaximumPairProductFast(set);
+
+	//int result = ch.MaximumPairProduct(set);
+
+   std::cout << result;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

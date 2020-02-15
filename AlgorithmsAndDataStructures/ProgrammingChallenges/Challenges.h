@@ -1,5 +1,4 @@
 
-
 #include <iostream>
 #include <vector>
 
@@ -9,8 +8,10 @@
 	{
 	public:
 
-		int SumOfTwoDigits(std::vector<int>& numbers);
 
+	
+		int MaximumPairProduct(std::vector<int>const& numbers );
+		int MaximumPairProductFast(std::vector<int>const& numbers);
 
 
 	};

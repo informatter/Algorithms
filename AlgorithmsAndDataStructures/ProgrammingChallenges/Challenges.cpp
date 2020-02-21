@@ -3,6 +3,74 @@
 #include <random>
 
 
+
+
+/// <summary>
+/// Computes the greatest common divisor between two positive integers
+/// </summary>
+/// <param name="a"></param>
+/// <param name="b"></param>
+/// <returns></returns>
+int Challenges::EuclideanAlgorithm(int a, int b)
+{
+	// Properties of the Euclidean algorithm
+	if (a == 0 && b != 0) return b;
+	else if (a != 0 && b == 0) return a;
+
+	else
+	{
+		int r = a % b;
+		while (r != 0)
+		{
+			a = b;
+			b = r;
+			r = a % b;
+		}
+	}
+
+	return b;
+
+
+}
+
+
+/// <summary>
+/// Iterative fiboncacci method.
+/// This method is much faster because it is only stored in the stack
+/// once during its lifetime.
+/// </summary>
+/// <param name="n"></param>
+/// <returns></returns>
+int64_t Challenges::FibonnacciIterative(int n)
+{
+	if (n == 0 || n == 1) return n;
+
+	int64_t a=0, b=1, c=1;
+	for (int i = 0; i < n; i++)
+	{
+		a = b;
+		b = c;
+		c = a + b;
+	}
+	return a;
+}
+
+
+/// <summary>
+/// Recursive fibonacci sequence.
+/// This method is computationally expensive due to the amount of stack calls and 
+/// memory used to store the method during its lifetime
+/// This of course is the typical behavior of recursive functions
+/// </summary>
+/// <param name="n"></param>
+/// <returns></returns>
+int64_t Challenges::fibonnaciRecursive(int n)
+{
+	if (n == 0 || n == 1) return n;
+
+	return fibonnaciRecursive(n - 1) + fibonnaciRecursive(n - 2);
+}
+
 /// <summary>
 /// Given an unordered set of positive integers, this method will 
 /// return the  product between the two largest members of the set
@@ -53,7 +121,6 @@ int64_t Challenges::MaximumPairProductFast(const std::vector<int>& numbers)
 { 
 	
 	int64_t largestIntA = 0;
-
 	int64_t largestIntB = 0;
 
 	for (int  i = 0; i < numbers.size(); i++)
@@ -69,49 +136,13 @@ int64_t Challenges::MaximumPairProductFast(const std::vector<int>& numbers)
 		if ( numbers[i] > largestIntB &&  numbers[i]!= largestIntA) largestIntB = numbers[i];
 	}
 
-	
-
 	return  largestIntA * largestIntB;
 	
 }
 
-/// <summary>
-/// 
-/// </summary>
-/// <param name="n">set length </param>
-/// <param name="m"> max number in  set </param>
-void Challenges::StressCase(int n, int m)
-{
-	bool exitCond = true;
-	while (exitCond)
-	{
-		// random number between 1 and n
-		int num = rand() % n + 1;
 
-		std::vector<int> testSet;
 
 	
 
-		for (size_t i = 0; i < num; i++)
-		{
-			testSet.push_back(rand() % m + 0);
-		}
-
-		
-
-		int64_t resultFast = MaximumPairProductFast(testSet);
-		int64_t resultNaive = MaximumPairProductNaive(testSet);
-
-		if (resultFast == resultNaive) std::cout << "OK";
-
-		else
-		{
-			std::cout << "Wrong answer!!" << " " << resultFast<< " , " << resultNaive;
-			exitCond = false;
-		}
-	}
-
-	
-}
 
 

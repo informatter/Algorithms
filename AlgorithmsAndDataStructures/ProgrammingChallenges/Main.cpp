@@ -6,37 +6,41 @@
 #include<random>
 #include "Challenges.h"
 #include "Timer.h"
+#include "StressTest.h"
 
 
 
 
 int main()
 {
-	std::vector<int> set;
-	Challenges ch;
-	for (int i = 1; i <= 200000; i++)
-	{
-		// Add a random num between 1-1000
-		//set.push_back(rand() % 1000 + 1);
-
-		set.push_back(i);		
-	}
-
 	
 
 	
-	ch.StressCase(5, 9);
 	
+#pragma region MAX PAIR WISE PRODUCT
+
+	//std::vector<int> set;
+	//for (int i = 1; i <= 200000; i++)
+	//{
+	//	// Add a random num between 1-1000
+	//	//set.push_back(rand() % 1000 + 1);
+
+	//	set.push_back(i);
+	//}
+
+
+	//ch.StressTest(5, 9, );
+
 
 	/*std::cout << "Input size:" << set.size()<<"\n";
 	std::cout << "\n";
 	std::cout << "Maximum par wise product fast"<< "\n" ;*/
 
-	/*Timer stopWatch;
-	
-	int64_t resultFast =  ch.MaximumPairProductFast(set);
+	//Timer stopWatch;
 
-	stopWatch.Stop();*/
+	//int64_t resultFast =  ch.MaximumPairProductFast(set);
+
+	//stopWatch.Stop();
 
 	//std::cout << resultFast << "\n";
 	//std::cout << "\n";
@@ -50,6 +54,63 @@ int main()
 
 	//std::cout << result << "\n";
 	//std::cout <<  "\n";
+#pragma endregion
+
+#pragma region EUCLIDEAN ALGORITHM
+
+		/*int GCD = ch.EuclideanAlgorithm(2323421, 321213);
+
+		std::cout << GCD << "\n";*/
+
+#pragma endregion
+
+#pragma region FIBONACCI
+
+
+
+		//int fibo = ch.FibonnacciIterative(8);
+
+		//StressTest::Fibonacci(12);
+
+
+		//std::cout << fibo << "\n";
+
+	int term = 4;
+
+	std::cout << "----------------------" << "FIBONACCI" << "----------------------" << "\n";
+	std::cout << "\n";
+	std::cout << "\n";
+
+	std::cout << "Calculating" << " " << term << " " << "th" << "term" << "\n";
+	std::cout << "\n";
+	std::cout << "Iterative Fibonacci" << "\n";
+
+
+	Timer stopWatch;
+
+	int64_t fiboIte = Challenges::FibonnacciIterative(term);
+
+	stopWatch.Stop();
+
+
+	std::cout << "Result:" << " " << fiboIte << "\n";
+	std::cout << "\n";
+	std::cout << "\n";
+
+	std::cout << "Recursive Fibonacci" << "\n";
+
+	Timer stopWatchB;
+
+	int64_t fiboRec = Challenges::fibonnaciRecursive(term);
+
+	stopWatchB.Stop();
+
+	std::cout << "Result:" << " " << fiboRec << "\n";
+
+#pragma endregion
+
+
+
 
 
 	

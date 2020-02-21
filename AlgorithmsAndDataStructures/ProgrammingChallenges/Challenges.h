@@ -9,6 +9,7 @@
 	public:
 	
 		static int EuclideanAlgorithm(int a, int b);
+		static void InsertionSort(std::vector<int>& data);
 		static int64_t FibonnacciIterative(int n);
 		static int64_t fibonnaciRecursive(int n);
 		static int64_t MaximumPairProductNaive(std::vector<int>const& numbers );

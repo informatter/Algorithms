@@ -4,6 +4,35 @@
 
 
 
+/// <summary>
+/// This method will sort an unordered list of all members of the Real numbers from smallest to biggest.
+/// Insertion sort is good with small inputs. With larger inputs it is not efficient because
+/// it has n^2 complexity time.
+/// </summary>
+/// <param name="data">The collection to sort</param>
+ void Challenges::InsertionSort( std::vector<int>& data)
+{
+	for (int j = 1; j < data.size(); j++)
+	{
+
+		int current = data[j];
+		int previousIndex = j - 1;
+
+		// iterate until correct position of insertion is found
+		while (previousIndex >= 0 && data[previousIndex] > current)
+		{
+			// assign larger number to next index
+			data[previousIndex + 1] = data[previousIndex];
+
+			// decrease previous index
+			previousIndex--;
+
+		}
+
+		data[previousIndex + 1] = current;
+	}
+
+}
 
 /// <summary>
 /// Computes the greatest common divisor between two positive integers

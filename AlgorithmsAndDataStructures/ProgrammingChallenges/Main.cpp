@@ -75,42 +75,60 @@ int main()
 
 		//std::cout << fibo << "\n";
 
-	int term = 4;
+	//int term = 10;
 
-	std::cout << "----------------------" << "FIBONACCI" << "----------------------" << "\n";
-	std::cout << "\n";
-	std::cout << "\n";
+	//std::cout << "----------------------" << "FIBONACCI" << "----------------------" << "\n";
+	//std::cout << "\n";
+	//std::cout << "\n";
 
-	std::cout << "Calculating" << " " << term << " " << "th" << "term" << "\n";
-	std::cout << "\n";
-	std::cout << "Iterative Fibonacci" << "\n";
-
-
-	Timer stopWatch;
-
-	int64_t fiboIte = Challenges::FibonnacciIterative(term);
-
-	stopWatch.Stop();
+	//std::cout << "Calculating" << " " << term << " " << "th" <<" " <<"term" << "\n";
+	//std::cout << "\n";
+	//std::cout << "Iterative Fibonacci" << "\n";
 
 
-	std::cout << "Result:" << " " << fiboIte << "\n";
-	std::cout << "\n";
-	std::cout << "\n";
+	//Timer stopWatch;
 
-	std::cout << "Recursive Fibonacci" << "\n";
+	//int64_t fiboIte = Challenges::FibonnacciIterative(term);
 
-	Timer stopWatchB;
+	//stopWatch.Stop();
 
-	int64_t fiboRec = Challenges::fibonnaciRecursive(term);
 
-	stopWatchB.Stop();
+	//std::cout << "Result:" << " " << fiboIte << "\n";
+	//std::cout << "\n";
+	//std::cout << "\n";
 
-	std::cout << "Result:" << " " << fiboRec << "\n";
+	//std::cout << "Recursive Fibonacci" << "\n";
+
+	//Timer stopWatchB;
+
+	//int64_t fiboRec = Challenges::fibonnaciRecursive(term);
+
+	//stopWatchB.Stop();
+
+	//std::cout << "Result:" << " " << fiboRec << "\n";
 
 #pragma endregion
 
 
+#pragma region SELECTION SORT
 
+//std::vector<int> data{ 20,3,35,11,2 };
+int n = 50;
+std::vector<int> data;
+	for (int i = 1; i <= n; i++)
+	{
+		// Add a random num between 1-1000
+		data.push_back(rand() % 10000 + 1);
+
+	}
+
+Challenges::SelectionSort(data);
+
+for (int i = 0; i < data.size(); i++)
+	std::cout << data[i] << "\n" ;
+
+
+#pragma endregion
 
 
 	

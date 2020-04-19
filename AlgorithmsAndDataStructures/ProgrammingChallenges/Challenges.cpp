@@ -22,17 +22,56 @@
 		while (previousIndex >= 0 && data[previousIndex] > current)
 		{
 			// assign larger number to next index
-			data[previousIndex + 1] = data[previousIndex];
+			data[previousIndex +1] = data[previousIndex];
 
 			// decrease previous index
 			previousIndex--;
-
 		}
 
-		data[previousIndex + 1] = current;
+		data[previousIndex+1] = current;
 	}
 
 }
+
+ /// <summary>
+ /// Selection sort, Sorts an unordered array of elements by finding the smallest element and moveing it to the
+ /// first index of the array, these procedure is repeated with all other items.
+ /// </summary>
+ /// <param name="data"></param>
+ void Challenges::SelectionSort(std::vector<int>& data)
+ {
+	
+	 int smallest, indexSmallest;
+		
+	 for (int i = 0; i < data.size()-1; i++)
+	 {
+
+		  int count = 0;
+		  smallest = data[i];
+		  indexSmallest = i;
+		 for (int j = i+1; j < data.size(); j++)
+		 {
+			 if(data[j] < data[i] && data[j] < smallest)
+			 {
+				 count++;
+				 smallest = data[j];
+				 indexSmallest = j;
+			 }
+		 }
+
+	
+		 // Swap values
+		 if (count != 0)
+		 {
+			 int temp = data[i];
+			 data[i] = smallest;
+			 data[indexSmallest] = temp;
+		 }
+	 }
+
+ }
+
+
 
 /// <summary>
 /// Computes the greatest common divisor between two positive integers

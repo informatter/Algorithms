@@ -14,6 +14,7 @@
 		static int64_t fibonnaciRecursive(int n);
 		static int64_t MaximumPairProductNaive(std::vector<int>const& numbers );
 		static int64_t MaximumPairProductFast(std::vector<int>const& numbers);
+		static void SelectionSort(std::vector<int>& data);
 	
 	};
 //}

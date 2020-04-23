@@ -27,6 +27,9 @@
     <ClCompile Include="StressTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HackerRankChallenges.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StressTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HackerRankChallenges.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

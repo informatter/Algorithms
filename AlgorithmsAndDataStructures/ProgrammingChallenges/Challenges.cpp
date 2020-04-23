@@ -4,6 +4,19 @@
 
 
 
+
+//int* Challenges::Foo(std::vector<int>& data)
+//{
+//	int* p;
+//
+//	for (size_t i = 0; i < data.size(); i++)
+//	{
+//		if (data[i] == 2) p = &data[i];
+//	}
+//
+//	int v = *p;
+//}
+
 /// <summary>
 /// This method will sort an unordered list of all members of the Real numbers from smallest to biggest.
 /// Insertion sort is good with small inputs. With larger inputs it is not efficient because
